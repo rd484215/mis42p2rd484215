@@ -15,5 +15,7 @@ namespace mis42p2rd484215.Models
         //we indicate that with an ICollection
         public ICollection<OrderDetail> OrderDetail { get; set; }
 
+        //public int productID { get; set; }
+
     }
 }
