@@ -11,6 +11,7 @@ namespace mis42p2rd484215.DAL
     {
         public MIS4200Context() : base("name=DefaultConnection")
         {
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context, mis42p2rd484215.Migrations.MISContext.Configuration>("DefaultConnection"));
 
         }
         public DbSet<Customer> Customers { get; set; }
