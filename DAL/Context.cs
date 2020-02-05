@@ -7,9 +7,9 @@ using System.Web;
 
 namespace mis42p2rd484215.DAL
 {
-    public class MIS4200Context : DbContext
+    public class Context : DbContext
     {
-        public MIS4200Context() : base("name=DefaultConnection")
+        public Context() : base("name=DefaultConnection")
         {
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context, mis42p2rd484215.Migrations.MISContext.Configuration>("DefaultConnection"));
 
