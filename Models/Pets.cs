@@ -7,7 +7,7 @@ namespace mis42p2rd484215.Models
 {
     public class Pets
     {
-        public int petID { get; set; }
+        public int petsID { get; set; }
 
         public string petName { get; set; }
         public string petType { get; set; }

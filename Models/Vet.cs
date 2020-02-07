@@ -15,7 +15,7 @@ namespace mis42p2rd484215.Models
         public string email { get; set; }
         public string phone { get; set; }
 
-        public int petID { get; set; }
+        public int petsID { get; set; }
         public virtual Pets Pets { get; set; }
     }
 }
