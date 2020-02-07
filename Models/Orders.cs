@@ -9,7 +9,7 @@ namespace mis42p2rd484215.Models
     public class Orders
     {
         [Key]
-        public int orderNum { get; set; }
+        public int orderId { get; set; }
         public string description { get; set; }
         public DateTime orderDate { get; set; }
 
@@ -17,6 +17,5 @@ namespace mis42p2rd484215.Models
         public int customerId { get; set; }
         public virtual Customer Customer { get; set; }
 
-        public int orderID { get; set; }
     }
 }
