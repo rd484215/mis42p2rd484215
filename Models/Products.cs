@@ -7,6 +7,7 @@ namespace mis42p2rd484215.Models
 {
     public class Products
     {
+        [key]
         public int productId { get; set; }
         public string description { get; set; }
         public decimal unitCost { get; set; }
@@ -15,7 +16,7 @@ namespace mis42p2rd484215.Models
         //we indicate that with an ICollection
         public ICollection<OrderDetail> OrderDetail { get; set; }
 
-        //public int productID { get; set; }
+        
 
     }
 }
