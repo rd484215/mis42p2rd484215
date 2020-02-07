@@ -1,14 +1,13 @@
-﻿@model mis42p2rd484215.Models.Vet
+﻿@model mis42p2rd484215.Models.Vett
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Details";
 }
 
-<h2>Delete</h2>
+<h2>Details</h2>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Vet</h4>
+    <h4>Vett</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -44,13 +43,8 @@
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
 </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vettID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

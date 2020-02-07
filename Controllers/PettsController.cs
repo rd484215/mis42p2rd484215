@@ -11,107 +11,107 @@ using mis42p2rd484215.Models;
 
 namespace mis42p2rd484215.Controllers
 {
-    public class PetsController : Controller
+    public class PettsController : Controller
     {
         private SD2Context db = new SD2Context();
 
-        // GET: Pets
+        // GET: Petts
         public ActionResult Index()
         {
-            return View(db.Pets.ToList());
+            return View(db.Petts.ToList());
         }
 
-        // GET: Pets/Details/5
+        // GET: Petts/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pets pets = db.Pets.Find(id);
-            if (pets == null)
+            Petts petts = db.Petts.Find(id);
+            if (petts == null)
             {
                 return HttpNotFound();
             }
-            return View(pets);
+            return View(petts);
         }
 
-        // GET: Pets/Create
+        // GET: Petts/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Pets/Create
+        // POST: Petts/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "petsID,petName,petType,ownerLastName,ownerFirstName,email,phone,patientSince")] Pets pets)
+        public ActionResult Create([Bind(Include = "pettsID,petName,petType,ownerLastName,ownerFirstName,email,phone,patientSince")] Petts petts)
         {
             if (ModelState.IsValid)
             {
-                db.Pets.Add(pets);
+                db.Petts.Add(petts);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(pets);
+            return View(petts);
         }
 
-        // GET: Pets/Edit/5
+        // GET: Petts/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pets pets = db.Pets.Find(id);
-            if (pets == null)
+            Petts petts = db.Petts.Find(id);
+            if (petts == null)
             {
                 return HttpNotFound();
             }
-            return View(pets);
+            return View(petts);
         }
 
-        // POST: Pets/Edit/5
+        // POST: Petts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "petsID,petName,petType,ownerLastName,ownerFirstName,email,phone,patientSince")] Pets pets)
+        public ActionResult Edit([Bind(Include = "pettsID,petName,petType,ownerLastName,ownerFirstName,email,phone,patientSince")] Petts petts)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(pets).State = EntityState.Modified;
+                db.Entry(petts).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(pets);
+            return View(petts);
         }
 
-        // GET: Pets/Delete/5
+        // GET: Petts/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pets pets = db.Pets.Find(id);
-            if (pets == null)
+            Petts petts = db.Petts.Find(id);
+            if (petts == null)
             {
                 return HttpNotFound();
             }
-            return View(pets);
+            return View(petts);
         }
 
-        // POST: Pets/Delete/5
+        // POST: Petts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Pets pets = db.Pets.Find(id);
-            db.Pets.Remove(pets);
+            Petts petts = db.Petts.Find(id);
+            db.Petts.Remove(petts);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

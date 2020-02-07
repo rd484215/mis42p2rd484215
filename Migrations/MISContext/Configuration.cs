@@ -12,6 +12,7 @@ namespace mis42p2rd484215.Migrations.MISContext
             AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"Migrations\MISContext";
             ContextKey = "mis42p2rd484215.DAL.SD2Context";
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(mis42p2rd484215.DAL.SD2Context context)

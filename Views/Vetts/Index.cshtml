@@ -1,4 +1,4 @@
-﻿@model IEnumerable<mis42p2rd484215.Models.Vet>
+﻿@model IEnumerable<mis42p2rd484215.Models.Vett>
 
 @{
     ViewBag.Title = "Index";
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.phone)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.vetID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.vetID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.vetID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.vettID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vettID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vettID })
         </td>
     </tr>
 }
