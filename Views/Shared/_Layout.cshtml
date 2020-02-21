@@ -24,12 +24,28 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Petts", "Index", "Petts")</li>
-                    <li>@Html.ActionLink("Vett", "Index", "Vetts")</li>
-                    <li>@Html.ActionLink("Appointment", "Index", "Appointments")</li>
+                   
 
                 </ul>
                 @Html.Partial("_LoginPartial")
+
+
+                @*DDL LIST class="btn btn-default dropdown-toggle" type="button" *@
+
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    Select an Option
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#"></a>@Html.ActionLink("Pets", "Index", "Petts")</li>
+                    <li><a href="#"></a>@Html.ActionLink("Vets", "Index", "Vetts")</li>
+                    <li><a href="#"></a>@Html.ActionLink("Appointment", "Index", "Appointments")</li>
+                </ul>
+            </div>
+
+                    @*DDL LIST*@
+
             </div>
         </div>
     </div>

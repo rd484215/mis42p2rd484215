@@ -11,14 +11,19 @@ namespace mis42p2rd484215.Models
     public class Appointment
     {
         public int appointmentID { get; set; }
-        [Display(Name ="Appointment ID")]
-        [Required(ErrorMessage = "ID Required")]
 
+        [Display(Name = "Start Time")]
+        [Required(ErrorMessage = "Time Required")]
         public DateTime appointmentStart { get; set; }
 
+        [Display(Name = "End Time")]
+        [Required(ErrorMessage = "Time Required")]
         public DateTime appointmentStop { get; set; }
 
+        [Display(Name = "Price")]
+        [Required(ErrorMessage = "Required")]
         public int price { get; set; }
+        
 
         // the next two properties link the orderDetail to the Order
         public int pettsID { get; set; }
